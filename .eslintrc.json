@@ -20,7 +20,7 @@
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
     "no-tabs": ["error", { "allowIndentationTabs": true }],
     "comma-dangle": ["error", "never"],
-    "linebreak-style": 1,
+    "linebreak-style": [1, "windows"],
     "semi": ["error", "always"],
     "quotes": ["error", "double"]
   }
