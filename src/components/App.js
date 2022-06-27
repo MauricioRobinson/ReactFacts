@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Facts from "./Facts";
 import Header from "./Header";
 
-function App() {
+function App(props) {
+  const [darkMode, setDarkMode] = useState(true);
+
+  console.log(darkMode);
+
+  function toggleDarkMode() {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  }
+
   return (
-    <div>
-      <Header />
-      <Facts />
-    </div>
+    <main className={props.darkMode ? "dark" : ""}>
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Facts darkMode={darkMode} />
+    </main>
   );
 }
 

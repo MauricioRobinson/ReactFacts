@@ -1,10 +1,25 @@
 import React from "react";
 
-function Facts() {
+function Facts(props) {
   return (
-    <main className="p-10 mt-16">
-      <h2 className="text-white font-bold text-4xl">Fun facts about React</h2>
-      <ul className="text-blue-300 list-disc pl-14 mt-10 text-lg">
+    <main
+      className={
+        props.darkMode ? "p-10 h-screen bg-slate-900" : "p-10 h-screen"
+      }>
+      <h2
+        className={
+          props.darkMode
+            ? "font-bold text-4xl text-white"
+            : "font-bold text-4xl"
+        }>
+        Fun facts about React
+      </h2>
+      <ul
+        className={
+          props.darkMode
+            ? "list-disc pl-14 mt-10 text-lg text-white"
+            : "list-disc pl-14 mt-10 text-lg"
+        }>
         <li>Was first released in 2013</li>
         <li>Was originally created by Jordan Walke</li>
         <li>Has well over 100K stars on Github</li>
